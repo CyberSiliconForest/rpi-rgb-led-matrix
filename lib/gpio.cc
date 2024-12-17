@@ -297,7 +297,7 @@ static RaspberryPiModel DetermineRaspberryModel() {
     pi_revision = ReadRevisionFromDeviceTree();
     if (pi_revision == 0) {
       fprintf(stderr, "Unknown Revision: Could not determine Pi model\n");
-      return PI_MODEL_3;  // safe guess fallback.
+      return PI_MODEL_4;  // safe guess fallback.
     }
   }
 
@@ -324,7 +324,7 @@ static RaspberryPiModel DetermineRaspberryModel() {
     return PI_MODEL_4;
 
   default:  /* a bunch of versions representing Pi 3 */
-    return PI_MODEL_3;
+    return PI_MODEL_4;
   }
 }
 
